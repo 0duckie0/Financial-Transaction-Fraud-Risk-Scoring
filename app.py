@@ -28,9 +28,9 @@ def predict():
     probability = model.predict_proba(scaled_features)[0][1] * 100
     
     # Assign actionable tiers
-    if probability <= 30:
+    if probability <= 15:
         tier = "Low Risk"
-    elif probability <= 75:
+    elif probability <= 40:
         tier = "Action Required: OTP Verification"
     else:
         tier = "High Risk: Transaction Blocked"
