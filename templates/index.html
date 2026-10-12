@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RiskSight AI - Fraud Monitor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Transaction Risk Scoring</h2>
+        <form id="fraudForm">
+            <label>Paste Transaction Row (Comma-separated values):</label>
+            <input type="text" id="transactionData" required placeholder="e.g., 0, -1.35, 1.19, ..., 149.62">
+            <button type="submit">Analyze Risk</button>
+        </form>
+        
+        <div id="resultBox" class="hidden">
+            <h3 id="riskTier"></h3>
+            <p id="riskScore"></p>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
